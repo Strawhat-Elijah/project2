@@ -1,14 +1,16 @@
 import sys
 from PyQt6.QtWidgets import QApplication
-from logic import BankController
-
+from logic import Logic
+ 
+ 
 def main() -> None:
     """Launch the Bank Account Manager application."""
-    app = QApplication(sys.argv)
-    controller = BankController()
-    controller.show()
-    sys.exit(app.exec())
+    application = QApplication(sys.argv)
+    window = Logic()
+    window.show()
+    application.exec()
  
  
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
+ 
